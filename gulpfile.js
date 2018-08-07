@@ -7,9 +7,18 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('default', ['sass','jsparser','browserSync', 'watch']);
 
+gulp.task('minify-img', () =>
+	gulp.src('src/img/**')
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5})]))
+		.pipe(gulp.dest('./dist/img'))
+);
 
 
 gulp.task('sass', function(){
@@ -45,7 +54,9 @@ gulp.task('browserSync', function() {
     },
   })
 })
+gulp.task('imgCopier',function(){
 
+});
 
 gulp.task('useref', function(){
   return gulp.src('src/*')

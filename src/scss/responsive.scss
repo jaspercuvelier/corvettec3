@@ -9,7 +9,7 @@ body{
 }
 /* container */
 .wrapper{
-  background-color:green;
+  background-color: white;
   display:flex;
   flex-wrap:wrap;
   width:100%;
@@ -17,25 +17,25 @@ body{
 }
 /* sections*/
 header{
-  background-color: red;;
+  background-color: black;
   color:white;
   height:15%;
   width: 100%;
   display:flex;
   flex-direction:row;
-  justify-content: flex-end;
-  align-content:space-around;
+  justify-content: space-between;
+  align-content:center;
 }
 
 main{
-background-color: grey;
-color:white;
+background-color: yellow;
+color:blue;
 height:75%;
   width: 100%;
 }
 
 footer{
-  background-color: white;
+  background-color: grey;
   color:black;
   height:10%;
     width: 100%;
@@ -57,11 +57,11 @@ nav{
   transition: transform 0.3s ease;
   background-color:yellow;
   color:black;
-
 }
 nav.open{
   transform:translate(0,0);
 }
+
 /* MAIN PARTS */
 
 
