@@ -6,9 +6,29 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jasper Cuvelier",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspercuvelier/corvettec3.git"
+  },
+  "keywords": [
+    "corvettec3.ca"
+  ],
+  "bugs": {
+    "url": "https://github.com/jaspercuvelier/corvettec3/issues"
+  },
+  "homepage": "https://github.com/jaspercuvelier/corvettec3#readme",
+  "dependencies": {
+    "gulp-cssnano": "^2.1.3"
   }
 }

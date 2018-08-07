@@ -1,0 +1,60 @@
+html{
+  height:100%
+}
+body{
+  margin:0px;
+  display:flex;
+  flex-wrap:wrap;
+  height:100%;
+}
+/* container */
+.wrapper{
+  background-color:green;
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  height:100%;
+}
+/* sections*/
+#header{
+  background-color: red;;
+  color:white;
+  height:15%;
+  width: 100%;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+#main{
+background-color: grey;
+color:white;
+height:75%;
+  width: 100%;
+}
+
+#footer{
+  background-color: white;
+  color:black;
+  height:10%;
+    width: 100%;
+}
+
+/* HEADERPARTS */
+
+.fixed {
+    position:fixed;
+}
+//https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf
+nav{
+  //height:100vh;
+//  margin-left: px;
+  width:100%;
+  background-color:yellow;
+  color:black;
+  z-index:100;
+  display:none;
+}
+/* MAIN PARTS */
+
+
+/* FOOTER PARTS */
