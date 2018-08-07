@@ -23,21 +23,28 @@
 
     </header>
     <nav>
+<div>
+  <h3>Pick an item!</h3>
+  <ul>
+    <li>DIY car hacks</li>
+    <li>Images</li>
+    <li>About me</li>
+    <li>Stories to read</li>
+  </ul>
+</div>
 
-      <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-      </ul>
+
     </nav>
     <main>
-      <section id="main">
+      <section>
 
 
-    </section>
+      </section>
+      <article>
+      </article>
     </main>
     <footer id="footer">
-      thanks!
+      <h3>Thanks! You've reached bottom!</h3>
     </footer>
   </div>
 
@@ -51,6 +58,7 @@
     console.log(aboveHeight)
       // when scroll
       $(window).scroll(function(){
+//var aboveHeight = $('header').outerHeight();
     console.log('scrolling...');
           // if scrolled down more than the header’s height
           if ($(window).scrollTop() > aboveHeight){
@@ -59,15 +67,21 @@
               // add padding top to the #content
               // (value is same as the height of the nav)
               $('header').addClass('fixed');//.css('top','0')//.next().css('padding-top','60px');
-
+              $('nav').addClass('fixed');
           } else {
 
               // when scroll up or less than aboveHeight,
               // remove the “fixed” class, and the padding-top
              $('header').removeClass('fixed')//.next().css('padding-top','0');
+              $('nav').removeClass('fixed');
           }
+        //  $('nav').css('transform', 'translate(-300px,'+aboveHeight+')');
+
       });
+
+      loadArticle();
   });
+
 </script>
 <script src="./js/main.js"></script>
 </body>
