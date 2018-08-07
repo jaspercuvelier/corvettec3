@@ -16,23 +16,25 @@ body{
   height:100%;
 }
 /* sections*/
-#header{
+header{
   background-color: red;;
   color:white;
   height:15%;
   width: 100%;
   display:flex;
-  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content: flex-end;
+  align-content:space-around;
 }
 
-#main{
+main{
 background-color: grey;
 color:white;
 height:75%;
   width: 100%;
 }
 
-#footer{
+footer{
   background-color: white;
   color:black;
   height:10%;
@@ -48,11 +50,17 @@ height:75%;
 nav{
   //height:100vh;
 //  margin-left: px;
-  width:100%;
+  width:300px;
+  height:100%;
+  position:absolute;
+  transform: translate(-300px,0);
+  transition: transform 0.3s ease;
   background-color:yellow;
   color:black;
-  z-index:100;
-  display:none;
+
+}
+nav.open{
+  transform:translate(0,0);
 }
 /* MAIN PARTS */
 

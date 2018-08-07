@@ -31,8 +31,9 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   // Other watchers
   gulp.watch('src/**/*.html', ['copy-html']);
+  gulp.watch('src/js/**/*.js', ['jsparser']);
   gulp.watch('src/*.html', browserSync.reload);
-  gulp.watch('src/js/**/*.js', [browserSync.reload , 'jsparser']);
+  gulp.watch('src/js/**/*.js', browserSync.reload );
 });
 
 

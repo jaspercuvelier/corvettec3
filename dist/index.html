@@ -10,61 +10,62 @@
 <body>
   <div class="wrapper">
 
-<header id="header">
-  <h1>My First Headings!</h1>
-  <button id="navToggle" class="hamburger hamburger--elastic" type="button">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-
-  <nav>
-    <ul>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
-    </ul>
-  </nav>
-</header>
-
-<section id="main">
+    <header id="header">
+      <h1>Corvette C3 Land</h1>
+      <button  class="hamburger hamburger--elastic navToggle" type="button" aria-label="Menu" aria-controls="navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
 
 
-</section>
-<section id="footer">
-  thanks!
-</section>
-</div>
+    </header>
+    <nav>
+
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+      </ul>
+    </nav>
+    <main>
+      <section id="main">
+
+
+    </section>
+    </main>
+    <footer id="footer">
+      thanks!
+    </footer>
+  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
-  console.log('loaded...')
-    // Calculate the height of <header>
-    // Use outerHeight() instead of height() if have padding
-    var aboveHeight = $('header').outerHeight();
-console.log(aboveHeight)
-    // when scroll
-    $(window).scroll(function(){
-console.log('scrolling...');
-        // if scrolled down more than the header’s height
-        if ($(window).scrollTop() > aboveHeight){
+  $(document).ready(function() {
+    console.log('loaded...')
+      // Calculate the height of <header>
+      // Use outerHeight() instead of height() if have padding
+      var aboveHeight = $('header').outerHeight();
+    console.log(aboveHeight)
+      // when scroll
+      $(window).scroll(function(){
+    console.log('scrolling...');
+          // if scrolled down more than the header’s height
+          if ($(window).scrollTop() > aboveHeight){
 
-            // if yes, add “fixed” class to the <nav>
-            // add padding top to the #content
-            // (value is same as the height of the nav)
-            $('header').addClass('fixed');//.css('top','0')//.next().css('padding-top','60px');
+              // if yes, add “fixed” class to the <nav>
+              // add padding top to the #content
+              // (value is same as the height of the nav)
+              $('header').addClass('fixed');//.css('top','0')//.next().css('padding-top','60px');
 
-        } else {
+          } else {
 
-            // when scroll up or less than aboveHeight,
-            // remove the “fixed” class, and the padding-top
-           $('header').removeClass('fixed')//.next().css('padding-top','0');
-        }
-    });
-});
-
-
+              // when scroll up or less than aboveHeight,
+              // remove the “fixed” class, and the padding-top
+             $('header').removeClass('fixed')//.next().css('padding-top','0');
+          }
+      });
+  });
 </script>
 <script src="./js/main.js"></script>
 </body>
