@@ -36,7 +36,7 @@ color:blue;
   width: 100%;
 }
 article{
-  
+
 }
 footer{
   background-color: grey;
@@ -87,7 +87,20 @@ nav div ul li{
 }
 
 
-/* MAIN PARTS */
-
+/* MAIN PARTS menu*/
+/* MAIN MENU */
+.mainNavigation{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+}
+.category{
+  background-color: #039be5;
+  color: white;
+  height:40px;
+  width:150px;
+  margin: 10px;
+  flex-grow: 1;
+}
 
 /* FOOTER PARTS */
