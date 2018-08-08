@@ -93,6 +93,7 @@ nav div ul li{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-evenly;
+  padding:5px;
 }
 .category{
   background-color: #039be5;
@@ -101,6 +102,15 @@ nav div ul li{
   width:150px;
   margin: 10px;
   flex-grow: 1;
+}
+/* https://www.w3schools.com/howto/howto_css_modals.asp*/ 
+.sub-category{
+  display:none;
+  background-color: #303f9f ;
+
+  color: white;
+  height:40px;
+  width:150px;
 }
 
 /* FOOTER PARTS */

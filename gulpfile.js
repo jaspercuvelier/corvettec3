@@ -54,10 +54,8 @@ gulp.task('browserSync', function() {
     },
   })
 })
-gulp.task('imgCopier',function(){
 
-});
-
+/*
 gulp.task('useref', function(){
   return gulp.src('src/*')
 
@@ -66,7 +64,7 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 
-});
+});*/
 /* GEBRUIKSVOORBEELD
 <!--build:js js/main.min.js -->
 <script src="js/lib/a-library.js"></script>

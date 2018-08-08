@@ -11,7 +11,7 @@ $(".navToggle").on('click',function(){
 
 });
 
-
+/* LOAD THE CORRECT ARTICLE */
 function loadArticle() {
   console.log(window.location.href);
   let url = window.location.href;
@@ -31,3 +31,9 @@ function loadArticle() {
   });
 
 }
+
+/* EVENTS FOR MAIN MENU */
+  $(".category").on('click',function(e){
+    console.log(e.target);
+    $(e.target).find(".sub-category").show();
+  })
