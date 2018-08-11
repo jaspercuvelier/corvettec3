@@ -34,12 +34,13 @@
       height:100%;
             padding:0px;
     }
+    nav div h3{display:none;}
     nav div ul{
       display:flex;
       flex-wrap:wrap;
       justify-content:space-evenly;
       flex-direction:row;
-
+      margin:auto auto;
     }
     nav div ul li{
       flex-grow:1;
