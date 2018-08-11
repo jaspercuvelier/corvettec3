@@ -14,6 +14,7 @@ body{
   flex-wrap:wrap;
   width:100%;
   height:100%;
+
 }
 /* sections*/
 header{
@@ -21,25 +22,29 @@ header{
   color:white;
   height:15%;
   width: 100%;
+  position:fixed;
   display:flex;
   flex-direction:row;
   justify-content: space-between;
   align-content:center;
+  order:1
 }
-header h1{
+header a{
   margin: auto auto;
 }
 main{
-background-color: rgb(254, 240, 24);
+background-color:#e0e0e0;
 color:blue;
 //height:75%;
   width: 100%;
+  padding-top:15vh;
+  order:3;
 }
 article{
 
 }
 footer{
-  background-color: grey;
+  background-color: #212121;
   color:white;;
   height:10%;
     width: 100%;
@@ -47,6 +52,7 @@ footer{
     flex-direction:column;
     justify-content: space-between;
     align-content:center;
+    order:4;
 }
 footer h3{
   margin:auto auto;
@@ -63,7 +69,7 @@ nav{
 //  margin-left: px;
   width:300px;
   height:100%;
-  position:absolute;
+  position:fixed;
   transform: translate(-300px,0);
   transition: transform 0.3s ease;
   background-color:#1976d2;
@@ -96,21 +102,63 @@ nav div ul li{
   padding:5px;
 }
 .category{
-  background-color: #039be5;
-  color: white;
-  height:40px;
-  width:150px;
+  background-color: #F5F5F5 ;
+  color: #212121;
+  //height:200px;
+  width:30%;
   margin: 10px;
   flex-grow: 1;
-}
-/* https://www.w3schools.com/howto/howto_css_modals.asp*/ 
-.sub-category{
-  display:none;
-  background-color: #303f9f ;
+  border-radius: 0px 0px 3px 3px;
+  border-color: #e0e0e0;
+  border-width:1px;
+  border-style: solid;
 
-  color: white;
-  height:40px;
-  width:150px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  height:100%;
+  width:100%;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.cat-img-holder{
+  background-color: #e65100;
+background-image: url('/img/menu-item-img.jpg');
+background-size: cover;
+background-position: center top;
+height:70px;;
+}
+.cat-title{
+text-transform: uppercase;
+margin:15px;
+text-align: center;
+
+}
+.cat-subcategory>ul{
+  margin-bottom:0px;
+  padding:10px;
+}
+.cat-subcategory>ul>li{
+  list-style:none;
+  margin:10px;
+  font-variant-caps: all-small-caps;
+}
+/*ADVERTISMENT DIVS */
+.ad-100{
+  background-color: #F5F5F5 ;
+  color: #212121;
+  height:100px;
+width:100%;
+  margin: 10px;
+  flex-grow: 1;
+/*  border-radius: 20px;
+      border-color: #e0e0e0;
+      border-width:1px;
+      border-style: solid;*/
 }
 
 /* FOOTER PARTS */

@@ -17,12 +17,13 @@ function loadArticle() {
   let url = window.location.href;
   let requestedPage = url.split("=")[1];
   console.log(requestedPage);
+  if(!requestedPage) {return false;}
   $("article").load("articles/"+requestedPage+"/index.html",function(response,status,xhr){
     if ( status == "error" )
     {
     var msg = "Sorry but there was an error: ";
     console.log( msg + xhr.status + " " + xhr.statusText );
-     $("main").css("height",'75%');
+    // $("main").css("height",'75%');
     }
     else {
 
