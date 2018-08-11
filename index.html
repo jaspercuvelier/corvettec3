@@ -3,9 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="./css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" >
+  <link rel="stylesheet" type="text/css" href="./css/1100width.css" >
   <link rel="stylesheet" type="text/css" href="./css/hamburger.css">
-
+  <!-- critical styles -->
+  <style>
+  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -13,7 +16,7 @@
     <header id="header">
       <img src="img/flags.jpg" height="100%"  srcset="img/flags.jpg 1000w, img/flags.jpg 2000w" alt="Corvette C3 logo with crossed flags">
 
-      <h1>Corvette C3 Land</h1>
+      <a href="/">  <h1>C3 Corvette Land</h1></a>
       <button  class="hamburger hamburger--elastic navToggle" type="button" aria-label="Menu" aria-controls="navigation">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -22,17 +25,18 @@
 
 
     </header>
+
     <nav>
-<div>
-  <h3>Pick an item!</h3>
-  <ul>
-    <li><a href="/">Home!</a></li>
-    <li><a href="?page=sidepipes">sidepipes</a></li>
-    <li>Images</li>
-    <li>About me</li>
-    <li>Stories to read</li>
-  </ul>
-</div>
+      <div>
+        <h3>Pick an item!</h3>
+        <ul>
+          <li><a href="/">Home!</a></li>
+          <li><a href="?page=sidepipes">sidepipes</a></li>
+          <li>Images</li>
+          <li>About me</li>
+          <li>Stories to read</li>
+        </ul>
+      </div>
 
 
     </nav>
@@ -42,27 +46,100 @@
 
       <article>
         <div class="mainNavigation">
-            <div class="category">
-              <div class="sub-category"></div>
-              <div class="sub-category"></div>
-              <div class="sub-category"></div>
+          <div class="ad-100 card">
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                </ul>
+
+              </div>
             </div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+                  <li>2</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="ad-100 card">
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+                  <li>2</li>
+                  <li>3</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="category">
+            <div class="card">
+              <div class="cat-img-holder"></div>
+              <div class="cat-title">DIY</div>
+              <div class="cat-subcategory">
+                <ul>
+                  <li>item one</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -73,38 +150,10 @@
     </footer>
   </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
   $(document).ready(function() {
-    console.log('loaded...')
-      // Calculate the height of <header>
-      // Use outerHeight() instead of height() if have padding
-      var aboveHeight = $('header').outerHeight();
-    console.log(aboveHeight)
-      // when scroll
-      $(window).scroll(function(){
-//var aboveHeight = $('header').outerHeight();
-    console.log('scrolling...');
-          // if scrolled down more than the header’s height
-          if ($(window).scrollTop() > aboveHeight){
-
-              // if yes, add “fixed” class to the <nav>
-              // add padding top to the #content
-              // (value is same as the height of the nav)
-              $('header').addClass('fixed');//.css('top','0')//.next().css('padding-top','60px');
-              $('nav').addClass('fixed');
-          } else {
-
-              // when scroll up or less than aboveHeight,
-              // remove the “fixed” class, and the padding-top
-             $('header').removeClass('fixed')//.next().css('padding-top','0');
-              $('nav').removeClass('fixed');
-          }
-        //  $('nav').css('transform', 'translate(-300px,'+aboveHeight+')');
-
-      });
-
-      loadArticle();
+    loadArticle();
   });
 
 </script>
