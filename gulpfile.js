@@ -12,7 +12,7 @@ var imagemin = require('gulp-imagemin');
 gulp.task('default', ['sass','jsparser','browserSync', 'watch']);
 
 gulp.task('minify-img', () =>
-	gulp.src('src/img/**')
+	gulp.src('src/**')
 		.pipe(imagemin([
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.jpegtran({progressive: true}),
