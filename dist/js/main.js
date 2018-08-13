@@ -13,6 +13,7 @@ $(".navToggle").on('click',function(){
 
 /* LOAD THE CORRECT ARTICLE */
 function loadArticle() {
+  //$(".image-gallery-container").hide();
   console.log(window.location.href);
   let url = window.location.href;
   let requestedPage = url.split("=")[1];
@@ -26,7 +27,12 @@ function loadArticle() {
     // $("main").css("height",'75%');
     }
     else {
-
+      console.log("initializing lazyLoader!")
+      $(".lazy").Lazy({
+          visibleOnly:true,
+          afterLoad: function(element){ console.log("Loaded: " + $(element).attr('src'))},
+        });
+      //  $(".image-gallery-container").show();
   //
     }
   });

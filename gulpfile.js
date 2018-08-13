@@ -39,7 +39,8 @@ gulp.task('sass', function(){
 gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   // Other watchers
-  gulp.watch('src/**/*.html', ['copy-html']);
+  gulp.watch('src/**/*.html', ['copy-html-and-jpgs']);
+	gulp.watch('src/**/*.jpg', ['copy-html-and-jpgs']);
   gulp.watch('src/js/**/*.js', ['jsparser']);
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload );
@@ -79,7 +80,9 @@ gulp.task('jsparser',function(){
   .pipe(gulp.dest('dist/js'))
 });
 
-gulp.task('copy-html',function(){
+gulp.task('copy-html-and-jpgs',function(){
   gulp.src('src/**/*.html')
+  .pipe(gulp.dest('dist'))
+	gulp.src('src/**/*.jpg')
   .pipe(gulp.dest('dist'))
 });
