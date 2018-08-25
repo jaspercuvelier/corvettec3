@@ -1,31 +1,29 @@
-
+<div class="ad-100"></div>
 <div class="article-content">
 
 Side pipes were an option in 1969 only. However, all C3 frames were drilled for the side pipe mounting brackets throughout the C3 run. Many C3 enthusiasts have added side pipes to their rides. The gallery below exemplifies the beauty of the side pipes added to these cars.
 
 <div class="image-gallery-container">
 
-<div class="image-holder">  <img data-src="/articles/sidepipes/img/scott.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/wesch.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/jackside.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/bobturn.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/aaron76.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/427roads.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-
-<div class="ad-100"></div>
-
-<div class="image-holder">  <img data-src="/articles/sidepipes/img/scott.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/wesch.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/jackside.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/bobturn.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/aaron76.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-<div class="image-holder">   <img data-src="/articles/sidepipes/img/427roads.jpg" alt="Corvette C3 with SidePipes" class="image lazy"></div>
-
 </div>
 </div>
 <script>
-/*  $(function() {
-$("img").Lazy({visibleOnly:true,
-  afterLoad:function(){console.log("image loaded!"))}});
-});*/
+for (var i = 1; i <=21; i ++)
+  {
+
+    var $holder = $("<div></div>").addClass("image-holder");
+    var srcset = "/articles/sidepipes/img/"+i+"-small.jpg 480w, /articles/sidepipes/img/"+i+"-medium.jpg 640w,/articles/sidepipes/img/"+i+"-large.jpg 1024w";
+    var $img = $("<img></img>").attr("data-src","/articles/sidepipes/img/"+i+"-small.jpg").attr("data-srcset",srcset).attr("alt","Corvette C3 with SidePipes").addClass("image").addClass("lazy");
+
+    $($holder).append($img);
+    $(".image-gallery-container").append($holder);
+  }
+    /*
+var $picture = $("<picture></picture>").addClass("lazy");
+var $source_SMALL = $("<source></source>").attr("media","(min-width: 465px)").attr("data-srcset","/articles/sidepipes/img/"+i+"-small.jpg");
+var $source_MEDIUM = $("<source></source>").attr("media","(min-width: 1100px)").attr("data-srcset","/articles/sidepipes/img/"+i+"-medium.jpg");
+var $img = $("<img></img>").attr("data-src","/articles/sidepipes/img/"+i+"-medium.jpg").attr("alt","Corvette C3 with SidePipes").addClass("image");
+$holder.append($picture.append($source_SMALL).append($source_MEDIUM).append($img));/*
+$(".image-gallery-container").append($holder);
+}*/
 </script>
