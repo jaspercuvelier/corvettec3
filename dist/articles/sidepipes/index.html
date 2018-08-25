@@ -8,12 +8,14 @@ Side pipes were an option in 1969 only. However, all C3 frames were drilled for 
 </div>
 </div>
 <script>
+const path = 'corvettec3/dist/articles/sidepipes/img/';
+
 for (var i = 1; i <=21; i ++)
   {
 
     var $holder = $("<div></div>").addClass("image-holder");
-    var srcset = "/articles/sidepipes/img/"+i+"-small.jpg 480w, /articles/sidepipes/img/"+i+"-medium.jpg 640w,/articles/sidepipes/img/"+i+"-large.jpg 1024w";
-    var $img = $("<img></img>").attr("data-src","/articles/sidepipes/img/"+i+"-small.jpg").attr("data-srcset",srcset).attr("alt","Corvette C3 with SidePipes").addClass("image").addClass("lazy");
+    var srcset = path+i+"-small.jpg 480w, "+path+i+"-medium.jpg 640w,"+path+i+"-large.jpg 1024w";
+    var $img = $("<img></img>").attr("data-src",path+i+"-small.jpg").attr("data-srcset",srcset).attr("alt","Corvette C3 with SidePipes").addClass("image").addClass("lazy");
 
     $($holder).append($img);
     $(".image-gallery-container").append($holder);
