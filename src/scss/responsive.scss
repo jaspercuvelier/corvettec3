@@ -134,10 +134,10 @@ background-color: #03a9f4;
 .card:hover {
   /*  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);*/
 }
-
+/*change path if needed  Remove the "DIST" part, is only for github io pages*/
 .cat-img-holder{
   background-color: #e65100;
-background-image: url('/img/menu-item-img.jpg');
+background-image: url('dist/img/menu-item-img.jpg');
 background-size: cover;
 background-position: center top;
 height:70px;;
