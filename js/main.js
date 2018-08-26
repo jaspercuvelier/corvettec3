@@ -1,4 +1,4 @@
-/* SHOW/HIDE NAV */
+/* SHOW/HIDE NAV + EVENTHANDLERS*/
 $(".navToggle").on('click',function(){
   $("nav").toggleClass('open');
     $("nav").attr('aria-hidden', !$("nav").attr('aria-hidden') );
@@ -14,20 +14,23 @@ $(".navToggle").on('click',function(){
     e.stopPropagation();
   });
 
-  $(".navbar-menuitem").on('click',function(e){
+  /*$(".navbar-menuitem").on('click',function(e){
     e.preventDefault();
     $("nav").toggleClass('open');
     $("nav").attr('aria-hidden','true');
     $("nav").removeClass('open');
     $(".navToggle").toggleClass("is-active");
     var $id = $(e.target.hash);
+    console.log(e.target.hash);
     if (e.target.hash === "#top")
     {
         var pos = 0;
     }
     else
     {
-      var pos = $id.offset().top - 115 ;
+      var vh = $(window).height();
+      console.log(vh + ' ' + 'vh * 0.15= ' + vh *0.15)
+      var pos = $id.offset().top - (vh * 0.15) - 10;
     }
 
     $('html, body').animate({
@@ -36,7 +39,34 @@ $(".navToggle").on('click',function(){
     $("main").off();
     $(".navbar-menuitem").off();
     e.stopPropagation();
-  });
+  });*/
+});
+/* EVENTHANDLERS voor NAV ZONDER NAVTOGGLE */
+$(".navbar-menuitem").on('click',function(e){
+  e.preventDefault();
+  $("nav").toggleClass('open');
+  $("nav").attr('aria-hidden','true');
+  $("nav").removeClass('open');
+  $(".navToggle").toggleClass("is-active");
+  var $id = $(e.target.hash);
+  console.log(e.target.hash);
+  if (e.target.hash === "#top")
+  {
+      var pos = 0;
+  }
+  else
+  {
+    var vh = $(window).height();
+    console.log(vh + ' ' + 'vh * 0.15= ' + vh *0.15)
+    var pos = $id.offset().top - (vh * 0.15) - 10;
+  }
+
+  $('html, body').animate({
+  scrollTop: pos }, 700);
+
+  $("main").off();
+  //$(".navbar-menuitem").off();
+  e.stopPropagation();
 });
 
 /* LOAD THE CORRECT ARTICLE */
