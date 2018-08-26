@@ -12,6 +12,7 @@ body{
   background-color: white;
   display:flex;
   flex-wrap:wrap;
+  flex-direction:row;
   width:100%;
   height:100%;
 
@@ -35,12 +36,13 @@ header a{
   color:white;
 }
 main{
+  display:flex;
 background-color:#ffca28;
 color:blue;
 //height:75%;
   width: 100%;
   padding-top:15vh;
-  order:3;
+  order:2;
 }
 
 footer{
