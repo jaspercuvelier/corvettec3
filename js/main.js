@@ -4,6 +4,7 @@ $(".navToggle").on('click',function(){
     $("nav").attr('aria-hidden', !$("nav").attr('aria-hidden') );
   //$("nav").attr('aria-hidden','false');
   $(".navToggle").toggleClass("is-active");
+
   $("main").on('click',function(e){
     $("nav").toggleClass('open');
     $("nav").attr('aria-hidden','true');
@@ -13,6 +14,29 @@ $(".navToggle").on('click',function(){
     e.stopPropagation();
   });
 
+  $(".navbar-menuitem").on('click',function(e){
+    e.preventDefault();
+    $("nav").toggleClass('open');
+    $("nav").attr('aria-hidden','true');
+    $("nav").removeClass('open');
+    $(".navToggle").toggleClass("is-active");
+    var $id = $(e.target.hash);
+    if (e.target.hash === "#top")
+    {
+        var pos = 0;
+    }
+    else
+    {
+      var pos = $id.offset().top - 115 ;
+    }
+
+    $('html, body').animate({
+    scrollTop: pos }, 700);
+
+    $("main").off();
+    $(".navbar-menuitem").off();
+    e.stopPropagation();
+  });
 });
 
 /* LOAD THE CORRECT ARTICLE */
@@ -22,16 +46,26 @@ function loadArticle() {
   let url = window.location.href;
   let requestedPage = url.split("=")[1];
   console.log(requestedPage);
-  
+  if (requestedPage === "home")
+    {
+      return false;
+    }
   if(!requestedPage) {return false;}
+
   $("article").load("articles/"+requestedPage+"/index.html",function(response,status,xhr){
     if ( status == "error" )
     {
     var msg = "Sorry but there was an error: ";
     console.log( msg + xhr.status + " " + xhr.statusText );
     // $("main").css("height",'75%');
+    $("article").load("articles/404/index.html",function(response,status,xhr){
+      if ( status =="error") {console.log("error!"); return false;}
+      $("main").css("height",'75%')
+    });
     }
     else {
+      $("nav div ul").hide();
+      $("nav div").append('<a href="?page=home"> << Get back home!</a>')
       console.log("initializing lazyLoader!")
       $(".lazy").Lazy({
           visibleOnly:true,
