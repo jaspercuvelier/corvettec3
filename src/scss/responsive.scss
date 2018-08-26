@@ -88,17 +88,17 @@ nav div ul{
   list-style-type: none;
   padding:0px;
 }
-nav div ul li{
+nav div ul li, nav>div>a{
   padding:12px 0px;
   text-transform:uppercase;
   text-align:center;
 }
-nav>div>ul>li>a, nav>div>ul>li>a:visited {
+nav>div>ul>li>a, nav>div>ul>li>a:visited, nav>div>a, nav>div>a:visited {
   color: white;
   transition: color 0.5s;
   text-decoration:none;
 }
-nav div ul li:hover{
+nav div ul li:hover, nav>div>a:hover{
 background-color: #03a9f4;
 }
 
@@ -147,14 +147,22 @@ text-align: center;
 
 }
 .cat-subcategory>ul{
-  margin-bottom:0px;
+  margin-bottom:8px;
 
 }
 .cat-subcategory>ul>li{
   list-style:none;
-  margin:10px;
+  margin:2px 4px;
   font-variant-caps: all-small-caps;
-}
+  padding:3px;
+  display:flex;
+  flex-wrap:wrap;
+    align-content:stretch;
+    flex-basis:auto;
+    width:100%;
+
+  }
+
 /*ADVERTISMENT DIVS */
 .ad-100{
   display:flex;
