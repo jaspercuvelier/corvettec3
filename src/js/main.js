@@ -1,8 +1,12 @@
 /* SHOW/HIDE NAV */
 $(".navToggle").on('click',function(){
   $("nav").toggleClass('open');
+    $("nav").attr('aria-hidden', !$("nav").attr('aria-hidden') );
+  //$("nav").attr('aria-hidden','false');
   $(".navToggle").toggleClass("is-active");
   $("main").on('click',function(e){
+    $("nav").toggleClass('open');
+    $("nav").attr('aria-hidden','true');
     $("nav").removeClass('open');
     $(".navToggle").toggleClass("is-active");
     $("main").off();
@@ -18,6 +22,7 @@ function loadArticle() {
   let url = window.location.href;
   let requestedPage = url.split("=")[1];
   console.log(requestedPage);
+  
   if(!requestedPage) {return false;}
   $("article").load("articles/"+requestedPage+"/index.html",function(response,status,xhr){
     if ( status == "error" )
