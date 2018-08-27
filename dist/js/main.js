@@ -57,7 +57,8 @@ $(".navbar-menuitem").on('click',function(e){
   else
   {
     var vh = $(window).height();
-    console.log(vh + ' ' + 'vh * 0.15= ' + vh *0.15)
+    var vw = $(window).width();
+    console.log(vh + ' ' + 'vh * 0.15= ' + vh *0.15 + " vw =" + vw)
     var pos = $id.offset().top - (vh * 0.15) - 10;
   }
 
@@ -68,6 +69,26 @@ $(".navbar-menuitem").on('click',function(e){
   //$(".navbar-menuitem").off();
   e.stopPropagation();
 });
+/*scroll handlers */
+$(document).ready(function() {
+  var stickyNavTop = $('nav').offset().top;
+var stickyNav = function(){
+      if ($(window).width() < 1100) {return false;}
+			    var scrollTop = $(window).scrollTop();
+			    if (scrollTop > stickyNavTop) {
+			        $('nav').addClass('sticky');
+			    } else {
+			        $('nav').removeClass('sticky');
+			    }
+			};
+
+			stickyNav();
+
+			$(window).scroll(function() {
+				stickyNav();
+			});
+});
+
 
 /* LOAD THE CORRECT ARTICLE */
 function loadArticle() {

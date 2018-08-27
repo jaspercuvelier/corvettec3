@@ -45,6 +45,19 @@
       align-self: flex-start;
       font-size: 15px;
     }
+    .sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.4);
+
+  padding: 20px;
+  transition: padding 0.5s;
+}
+
     main{
       //padding-left: 20vw;
       //padding-top: 25vh
