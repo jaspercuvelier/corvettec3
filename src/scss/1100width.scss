@@ -20,7 +20,9 @@
     height:5%;
     width:100%;
     transform:translate(0,0);
-    order: 2
+    order: 2;
+    padding:10px;
+    transition: padding 0.5s;
   }
     nav div{
       display:flex;
