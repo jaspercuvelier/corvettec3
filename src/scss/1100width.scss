@@ -8,27 +8,33 @@
   }
   header{
     width:100%;
+    order: 1;
+    position:relative;
   }
   nav{
-    top:15%;
+    background-color:grey;
+    position:relative;
+    //top:15%;
     display:flex;
     flex-wrap: wrap;
-    height:100%;
-    width:20%;
+    height:5%;
+    width:100%;
     transform:translate(0,0);
+    order: 2
   }
     nav div{
       display:flex;
       flex-wrap:wrap;
       width:100%;
-      height:100%;
+    //  height:10%;
       padding:0px;
     }
+    nav div h3 {display:none;}
     nav div ul{
       display:flex;
       flex-wrap:wrap;
       justify-content:space-evenly;
-      flex-direction:column;
+      flex-direction:row;
       margin:0 auto;
     }
     nav div ul li{
@@ -40,7 +46,9 @@
       font-size: 15px;
     }
     main{
-      padding-left: 20vw;
+      //padding-left: 20vw;
+      //padding-top: 25vh
+      padding-top:0px ;
     }
     .category{
       width:30%;
